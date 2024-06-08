@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "393eb693-3677-4c6b-a741-3a2be99373a7",
+		"name": "IMDB MOVIE API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Movie Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actors\": \"Dakota Fanning, Georgina Campbell, Alistair Brammer, Hannah Howland\",\r\n    \"description\": \"When 28-year-old artist Mina finds shelter after getting stranded in an expansive, untouched forest in western Ireland, she unknowingly becomes trapped alongside three strangers that are watched and stalked by mysterious creatures each night\",\r\n    \"directors\": \"Ishana Night Shyamalan\",\r\n    \"genres\": \"Horror, Mystery, Thriller\",\r\n    \"ids\": \"1001\",\r\n    \"rating\": \"5.4\",\r\n    \"revenue\": \"100.69\",\r\n    \"runtime\": \"102\",\r\n    \"title\": \"The Watchers\",\r\n    \"votes\": \"38552\",\r\n    \"year\": \"2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/imdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/imdb/The Watchers 2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb",
+						"The Watchers 2024"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/imdb/The Watchers 2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb",
+						"The Watchers 2024"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie Data",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actors\": \"Dakota Fanning, Georgina Campbell, Alistair Brammer, Hannah Howland\",\r\n    \"description\": \"Sample description\",\r\n    \"directors\": \"Ishana Night Shyamalan\",\r\n    \"genres\": \"Horror, Mystery, Thriller\",\r\n    \"ids\": \"1001\",\r\n    \"rating\": \"6.6\",\r\n    \"revenue\": \"100.69\",\r\n    \"runtime\": \"102\",\r\n    \"title\": \"The Watchers 2024\",\r\n    \"votes\": \"38552\",\r\n    \"year\": \"2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/imdb/The Watchers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb",
+						"The Watchers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk - Get All Movies Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/imdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk - Add All Movies Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/imdb/addall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb",
+						"addall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk - Delete All Movies Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/imdb/deleteall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb",
+						"deleteall"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
